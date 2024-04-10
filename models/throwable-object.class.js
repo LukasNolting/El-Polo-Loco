@@ -1,5 +1,5 @@
 class ThrowableObject extends MovableObject {
-  throwBottle = false;
+  throwBottleStatus = false;
   bottleBreak = false;
   isBreaking = false;
   bottlesplash_sound = new Audio('./audio/bottleBreak.mp3');

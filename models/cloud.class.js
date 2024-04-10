@@ -3,9 +3,9 @@ class Cloud extends MovableObject {
   height = 250;
   static lastCloudX = 50; // Startposition der ersten Wolke auf der x-Achse
 
-  
+
   constructor() {
-    super().loadImage('../img/5_background/layers/4_clouds/1.png');
+    super().loadImage('/el_polo_loco/img/5_background/layers/4_clouds/1.png');
     this.width = 500;
     this.setInitialPosition();
     this.moveClouds();
