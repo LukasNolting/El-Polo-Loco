@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>El Pollo Loco</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/10_favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/10_favicon/favicon-32x32.png"
+    />
+    <script src="models/drawable-object.class.js" defer></script>
+    <script src="models/movable-object.class.js" defer></script>
+    <script src="models/character.class.js" defer></script>
+    <script src="models/chicken.class.js" defer></script>
+    <script src="models/small-chicken.class.js" defer></script>
+    <script src="models/collectable-object.class.js" defer></script>
+    <script src="models/status-bar.class.js" defer></script>
+    <script src="models/cloud.class.js" defer></script>
+    <script src="models/background-object.class.js" defer></script>
+    <script src="models/world.class.js" defer></script>
+    <script src="models/level.class.js" defer></script>
+    <script src="models/endboss.class.js" defer></script>
+    <script src="models/throwable-object.class.js" defer></script>
+    <script src="models/level1.js" defer></script>
+    <script src="models/keyboard.class.js" defer></script>
+    <script src="js/game.js" defer></script>
+  </head>
+  <body onload="initLevel()">
+    <div class="overlayMobile">
+      <div class="turnScreenBox" id="turnScreen">
+        <img
+          class="turnScreenIcon"
+          src="./img/12_icons/turn-device.png"
+          alt=""
+        />
+        <p>Please rotate your device into landscape mode</p>
+      </div>
+    </div>
+    <h1>El Pollo Loco</h1>
+    <div class="game-container">
+      <div id="loadingScreen" class="loader-container hide">
+        <h4>Loading chicken...</h4>
+        <img
+          src="img/3_enemies_chicken/chicken_small/Muestra gif.gif"
+          alt="Loading..."
+          class="spinner"
+        />
+      </div>
+      <div class="btn-container">
+        <div id="mute" class="btn btn-mute" onclick="toggleMute()">
+          <img id="muteIcon" src="./img/12_icons/sound_off.svg" alt="" />
+        </div>
+      </div>
+      <div id="startScreen" class="startscreen-div">
+        <div class="startscreen-img-1">
+          <div class="startscreen-wrapper-img">
+            <img
+              src="img/9_intro_outro_screens/start/startscreen_1.png"
+              alt=""
+              class="startscreen-img-1-img"
+            />
+          </div>
+          <div class="popup-content-second">
+            <h2>Instructions</h2>
+            <div class="instruction-popup-item">
+              Move Left<img
+                src="./img/12_icons/left_arrow.png"
+                alt=""
+                class="left-arrow"
+              />
+            </div>
+            <div class="instruction-popup-item">
+              Move Right<img
+                src="./img/12_icons/right_arrow.png"
+                alt=""
+                class="right-arrow"
+              />
+            </div>
+            <div class="instruction-popup-item">
+              Attack<img
+                src="./img/12_icons/d_button.png"
+                alt=""
+                class="d-button"
+              />
+            </div>
+            <div class="instruction-popup-item">
+              Jump<img src="./img/12_icons/space.png" alt="" class="space" />
+            </div>
+          </div>
+          <div class="flex-container">
+            <button onclick="startGame()">Start Game</button>
+          </div>
+        </div>
+      </div>
+      <div id="winGameScreen" class="startscreen-div d-none">
+        <div class="btn-container-restart">
+          <button onclick="backToMenu()">Back to Menu</button>
+          <button onclick="restartGame()">Restart</button>
+        </div>
+        <img
+          src="img/9_intro_outro_screens/game_over/game over!.png"
+          alt=""
+          class="startscreen-img-1-img-win"
+        />
+      </div>
+      <div id="gameOverScreen" class="startscreen-div d-none">
+        <div class="startscreen-img-1">
+          <div class="btn-container-restart">
+            <button onclick="backToMenu()">Back to Menu</button>
+            <button onclick="restartGame()">Restart</button>
+          </div>
+          <img
+            src="img/9_intro_outro_screens/game_over/oh no you lost!.png"
+            alt=""
+            class="startscreen-img-1-img"
+          />
+        </div>
+      </div>
+
+      <canvas id="canvas" class="d-none" width="720" height="480"></canvas>
+      <div class="btn-mobile-wrapper" id="btn-mobile-wrapper">
+        <div class="btn-mobile-flex">
+          <img
+            class="btn-mobile"
+            id="btnJump"
+            src="./img/12_icons/up.png"
+            alt=""
+          />
+          <img
+            class="btn-mobile"
+            id="btnThrow"
+            src="./img/12_icons/attack.png"
+            alt=""
+          />
+        </div>
+        <div class="btn-mobile-flex">
+          <img
+            class="btn-mobile"
+            id="btnLeft"
+            src="./img/12_icons/left.png"
+            alt=""
+          />
+          <img
+            class="btn-mobile"
+            id="btnRight"
+            src="./img/12_icons/right.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
