@@ -29,6 +29,7 @@ body {
 .instructions-flex {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
   z-index: 100;
