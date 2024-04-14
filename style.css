@@ -336,53 +336,49 @@ canvas {
 .btn-mobile-wrapper-800 {
   display: flex;
 }
-
-@media only screen and (max-width: 760px) {
-  canvas {
-    width: 100%;
+@media (max-width: 1024px) and (orientation: landscape) {
+  .overlayMobile {
+    display: none;
   }
-
-  .game-start button {
-    width: 100px;
-    height: 40px;
-    font-size: 30px;
+  h1 {
+    display: none;
   }
-
-  #keys {
-    font-size: 30px;
-  }
-
-  .hud-container {
+  .btn-mobile-wrapper {
     display: flex;
   }
 }
 
-@media only screen and (max-width: 505px) {
-  .overlayMobile {
-    width: 100%;
-    display: flex;
-    text-align: center;
-  }
-  h1,
-  .game-start,
-  #keys,
-  .hud-container,
-  .game-over-container,
-  canvas {
+@media (max-width: 720px) {
+  h1 {
     display: none;
   }
-  .overlay-container {
-    display: flex;
+  /* .btn-mobile-wrapper { */
+    /* display: flex; */
+  /* } */
+}
+
+@media (min-width: 800px) {
+  .overlayMobile {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-height: 600px) {
+  .flex-container,
+  canvas {
+    width: 100%;
   }
 }
 
 @media only screen and (max-height: 480px) {
-  h1,
-  #keys {
-    display: none;
-  }
-
+  .game-container,
+  .flex-container,
   canvas {
-    height: 100vh;
+    max-width: 720px;
+    max-height: -webkit-fill-available;
+  }
+  .game-container {
+    overflow: hidden;
   }
 }
