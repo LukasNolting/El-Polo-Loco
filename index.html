@@ -18,7 +18,10 @@
       href="img/10_favicon/favicon-32x32.png"
     />
   </head>
+
   <body onload="initLevel()">
+    <!-- Overlay Meldung -->
+
     <div class="overlayMobile">
       <div class="turnScreenBox" id="turnScreen">
         <img
@@ -29,21 +32,26 @@
         <p>Please rotate your device into landscape mode</p>
       </div>
     </div>
+
+    <!-- Überschrift -->
+
     <h1>El Pollo Loco</h1>
+
     <div class="game-container">
-      <div id="loadingScreen" class="loader-container hide">
+      <!-- LOADING SCREEN -->
+
+      <canvas id="canvas"></canvas>
+      <!-- <div id="loadingScreen" class="loader-container hide">
         <h4>Loading chicken...</h4>
         <img
           src="img/3_enemies_chicken/chicken_small/Muestra gif.gif"
           alt="Loading..."
           class="spinner"
         />
-      </div>
-      <div class="btn-container">
-        <div id="mute" class="btn btn-mute" onclick="toggleMute()">
-          <img id="muteIcon" src="./img/12_icons/sound_off.svg" alt="" />
-        </div>
-      </div>
+      </div> -->
+
+      <!-- MUTE ICON -->
+
       <div id="startScreen" class="startscreen-div">
         <div class="startscreen-img-1">
           <div class="startscreen-wrapper-img">
@@ -53,39 +61,57 @@
               class="startscreen-img-1-img"
             />
           </div>
-          <div class="popup-content-second">
+
+          <!-- INSTRUCTIONS -->
+
+          <!-- <div class="instructions-flex">
             <h2>Instructions</h2>
-            <div class="instruction-popup-item">
+            <div class="instruction">
               Move Left<img
                 src="./img/12_icons/left_arrow.png"
                 alt=""
                 class="left-arrow"
               />
             </div>
-            <div class="instruction-popup-item">
+            <div class="instruction">
               Move Right<img
                 src="./img/12_icons/right_arrow.png"
                 alt=""
                 class="right-arrow"
               />
             </div>
-            <div class="instruction-popup-item">
+            <div class="instruction">
               Attack<img
                 src="./img/12_icons/d_button.png"
                 alt=""
                 class="d-button"
               />
             </div>
-            <div class="instruction-popup-item">
+            <div class="instruction">
               Jump<img src="./img/12_icons/space.png" alt="" class="space" />
             </div>
-          </div>
-          <div class="flex-container">
+          </div> -->
+
+          <!-- START BUTTON -->
+
+          <!-- <div class="flex-container">
+            <div style="width: 40px"></div>
             <button onclick="startGame()">Start Game</button>
-          </div>
-        </div>
+            <div id="mute" class="btn btn-mute" onclick="toggleMute()">
+              <img id="muteIcon" src="./img/12_icons/sound_off.svg" alt="" />
+            </div>
+          </div>  -->
+
+
+         <!-- </div> -->
+
+      
+
       </div>
-      <div id="winGameScreen" class="startscreen-div d-none">
+
+      <!-- WIN GAME -->
+
+      <!-- <div id="winGameScreen" class="startscreen-div d-none">
         <div class="btn-container-restart">
           <button onclick="backToMenu()">Back to Menu</button>
           <button onclick="restartGame()">Restart</button>
@@ -95,8 +121,11 @@
           alt=""
           class="startscreen-img-1-img-win"
         />
-      </div>
-      <div id="gameOverScreen" class="startscreen-div d-none">
+      </div>  -->
+
+      <!-- GAME OVER -->
+
+      <!-- <div id="gameOverScreen" class="startscreen-div d-none">
         <div class="startscreen-img-1">
           <div class="btn-container-restart">
             <button onclick="backToMenu()">Back to Menu</button>
@@ -108,10 +137,11 @@
             class="startscreen-img-1-img"
           />
         </div>
-      </div>
+      </div>  -->
 
-      <canvas id="canvas" class="d-none" width="720" height="480"></canvas>
-      <div class="btn-mobile-wrapper" id="btn-mobile-wrapper">
+      <!-- BUTTONS RESPONSIVE -->
+
+      <!-- <div class="btn-mobile-wrapper" id="btn-mobile-wrapper">
         <div class="btn-mobile-flex">
           <img
             class="btn-mobile"
@@ -140,10 +170,10 @@
             alt=""
           />
         </div>
-      </div>
+      </div>  -->
     </div>
   </body>
-  <script src="models/drawable-object.class.js"></script>
+  <!-- <script src="models/drawable-object.class.js"></script>
   <script src="models/movable-object.class.js"></script>
   <script src="models/character.class.js"></script>
   <script src="models/chicken.class.js"></script>
@@ -158,5 +188,6 @@
   <script src="models/throwable-object.class.js"></script>
   <script src="models/level1.js"></script>
   <script src="models/keyboard.class.js"></script>
-  <script src="js/game.js"></script>
+  <script src="js/game.js"></script> -->
+
 </html>
